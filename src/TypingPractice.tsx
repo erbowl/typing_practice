@@ -27,7 +27,12 @@ greet('World');`);
     const char = e.key;
     if (char === codeString[index]) {
       let newIndex = index + 1;
-      while (codeString[newIndex] === " " || codeString[newIndex] === "\n") {
+
+      while (
+        codeString[newIndex] === " " ||
+        codeString[newIndex] === "\n" ||
+        !/[\x20-\x7E]/.test(codeString[newIndex])
+      ) {
         newIndex++;
       }
       setIndex(newIndex);
