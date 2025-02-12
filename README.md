@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Shakyo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](./sample.gif)
 
-Currently, two official plugins are available:
+Shakyo is a typing practice application that allows users to practice typing code with syntax highlighting. Users can select a programming language, paste their code, and practice typing with visual feedback.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Syntax highlighting for multiple programming languages
+- Real-time typing feedback
+- Language selection
+- Customizable code input
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Usage
 
-- Configure the top-level `parserOptions` property like this:
+1. Open the application in your browser at [https://shakyo.erbowl.com/](https://shakyo.erbowl.com/).
+2. Select the programming language from the dropdown menu.
+3. Paste your code into the textarea.
+4. Start typing to practice.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Contributing
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Contributions are welcome! Please open an issue or submit a pull request.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## License
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+This project is licensed under the MIT License.
